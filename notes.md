@@ -54,3 +54,8 @@ Value is inferred
 - two different syntax
   const heros: string[] = []
   const heros: Array<string> = []
+
+## Union
+- allows you to use multiple different types at a time
+  - this can be a number or string:
+    let score: number | string

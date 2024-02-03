@@ -30,5 +30,20 @@ function getDbId(id: number | string) {
 	if (typeof id === "string") {
 		id.toLowerCase()
 	}
-
 }
+
+//array
+
+const data: number[] = [1,2,3]
+// all numbers OR all strings in array
+const data2: string[] | number[] = ["1", "2", "3"]
+// can be a mix of strings and numbers
+const data3: (string | number)[] = ["1", 2, "3"]
+
+// literal type of assignment where can only be 3.14
+let pi: 3.14 = 3.14
+
+let seatAllotment: "aisle" | "middle" | "window"
+seatAllotment = "aisle"
+// this is not allowed
+// seatAllotment = "crew"
