@@ -59,3 +59,10 @@ Value is inferred
 - allows you to use multiple different types at a time
   - this can be a number or string:
     let score: number | string
+
+## Tuples
+- useful to specify what order you want datatypes to be in
+	const user: (string | number)[] = ['ds', 1]
+- be careful though there are some loop holes that allow you to 
+reassign values based on index
+
