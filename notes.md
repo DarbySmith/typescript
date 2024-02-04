@@ -22,6 +22,10 @@ Value is inferred
 - should not use any in code as it is a bad practice. It defeats the purpose of using type script
 - noImplicitAny flag will flag any "any" types
 
+## variable declarations
+- let
+- const
+
 ## functions
 - keyword: function
     ```ts
@@ -49,12 +53,12 @@ Value is inferred
 	```
 
   - readonly --> allows you to have attributes that cannot be altered
-	```ts 
+	```ts
 	type User = {
 		readonly name: string
 		phone: number
 		isActive: boolean
- 	}
+	}
 	```
 
 
@@ -74,7 +78,9 @@ Value is inferred
 
 ## Tuples
 - useful to specify what order you want datatypes to be in
+	```ts
 	const user: (string | number)[] = ['ds', 1]
+	```
 - be careful though there are some loop holes that allow you to 
 reassign values based on index
 
@@ -89,4 +95,27 @@ reassign values based on index
 	}
 	
 	const dsSeat = SeatChoice.AISLE // dsSeat = 0
+	```
+
+## Interfaces
+- describe the shape the values have and powerful way of defining contracts within code
+	```ts
+	interface User {
+		readonly id: number
+		name: string
+		email?: string
+		startTrial(): string
+		getCoupon(couponname: string): number
+	}
+
+	const darby: User = {
+		id: 25,
+		name: "darby",
+		startTrial: () => {
+			return "trial started"
+		},
+		getCoupon: (couponname: "super") => {
+			return 10
+		}
+	}
 	```
