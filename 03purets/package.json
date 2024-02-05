@@ -1,0 +1,24 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "## Tutoral  - https://www.youtube.com/watch?v=30LWjhZzg50 -",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarbySmith/typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarbySmith/typescript/issues"
+  },
+  "homepage": "https://github.com/DarbySmith/typescript#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
