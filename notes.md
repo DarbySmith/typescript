@@ -119,3 +119,61 @@ reassign values based on index
 		}
 	}
 	```
+
+## initialize for project
+- commands: 
+	- $ tsc --init
+		- creates `tsconfig.json`
+	- $ npm init -y
+		- creates `package.json`
+			- installing package manager 
+- create file `index.html`
+	- type `!`+`tab`
+		- will autofill
+	- in <body> type `script`
+		- select option `script:src`
+			- loads a script file
+			- `<script src=""></script>`
+- create a `src` and `dist` directory
+	- `src` is where you write your code
+	- `dist` gets onto production is getting served to the end user
+- inside `src` create a `index.ts` file
+- inside `dist` create a `index.js` file
+- in `index.html` add src reference ("./dist/index.js") to `<script>`
+	- you shouldn't write anthing in this index.js file
+- `tsconfig.json`
+	- uncomment and edit: `"outDir": "./dist"`
+		- compiles files with .ts into the dist directory
+- `index.ts`
+	```ts
+	console.log("message")
+	```
+- $ tsc -w
+	- will keep running and looking for file changes
+- opening localhost
+	- lite-server
+		- install package to run the localhost server
+			- $ `npm i lite-server`
+		- `package.json`: `scripts` add `"start": "lite-server"`
+		- $ npm start
+	- extension live server
+		- install 'live server' extension
+		- navigate to `index.html`
+		- right click and select `open with live server` (make sure to close at end)
+
+## creating classes
+- syntax:
+	```ts
+	class User {
+		email: string
+		name: string
+		city: string = ""
+		constructor(email: string, name:string){
+			this.email = email;
+			this.name = name;
+    	}
+	}
+
+	const darby = new User("d@D.com", "darby")
+	darby.city = "denver"
+	```
