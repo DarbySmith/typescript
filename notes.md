@@ -177,3 +177,38 @@ reassign values based on index
 	const darby = new User("d@D.com", "darby")
 	darby.city = "denver"
 	```
+	OR
+	(this is the usual way you will see prof developers do)
+	```ts
+	class User {
+		private readonly city: string = "denver"
+		constructor(
+			public email: string, 
+			public name:string,
+			private userId: string
+			){
+		}
+	}
+	```
+## access
+- private
+	- does not allow you to acces an attribute
+	```ts
+	private city: string = ""
+	```
+- public
+	- default, but same syntax as above subbed with 'public'
+
+## getters and setters
+- *(said was common ask in interview)*
+	- when making setter you cannot make the return type `void` or any other type
+		- error: `A 'set' accessor cannot have a return type annotation.`
+		- wants to *not* have a return type
+		ERROR
+		```ts
+		set coureCount(courseNum: number): void {}
+		```
+		w/out void = GOOD
+		```ts
+		set coureCount(courseNum: number): {}
+		```
