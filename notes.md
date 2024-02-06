@@ -224,6 +224,7 @@ reassign values based on index
 	- `protected _courseCount: number = 1`
 
 ## class implementing an interface
+- keyword: `implements`
 - syntax:
 	```ts
 	interface TakePhoto {
@@ -243,3 +244,39 @@ reassign values based on index
 	}
 	```
 - can add extra attributes, but MUST have all that are implemented in interface
+
+## inheritance 
+- keyword: extends
+
+## abstract classes
+- exactly the blue print 
+- you CANNOT create objects from this class
+- the class extending it will be responsible for creating objects 
+- help the class inheriting them have better structure
+	```ts
+	abstract class TakePhoto {
+		constructor(
+			public cameraMode: string,
+			public filter: string
+		){}
+
+		abstract getSepia(): void
+		getReelTime(): number{
+			return 8
+		}
+	}
+
+	class Instagram extends TakePhoto {
+		constructor(
+			public cameraMode: string,
+			public filter: string,
+			public burst: number
+		){
+			super(cameraMode, filter)
+		}
+
+		getSepia(): void {
+			console.log("sepia")
+		}
+	}
+	```
