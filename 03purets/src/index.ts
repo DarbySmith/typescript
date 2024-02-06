@@ -16,7 +16,8 @@
 // this syntax produces the same javascript as the commented out User class above (without the userId)
 class User {
     
-    private _courseCount = 1
+    // this is accessable by this class and inherited classed (but not outside)
+    protected _courseCount: number = 1
     
     readonly city: string = "denver"
     constructor(
@@ -48,4 +49,14 @@ class User {
         this._courseCount = courseNum
     }
 
+}
+
+// INHERITANCE
+//  SubUser will inherit all attributes from parent User
+//private are not accessable by child
+class SubUser extends User {
+    isFamily: boolean = true
+    changeCourseCount(){
+        this._courseCount = 4
+    }
 }

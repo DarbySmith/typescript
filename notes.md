@@ -212,3 +212,34 @@ reassign values based on index
 		```ts
 		set coureCount(courseNum: number): {}
 		```
+- keywords `get` and `set`
+
+## access modifiers
+- public
+	- accessible outside the class
+- private
+	- not accessible outside the class or by children (inherited) classes
+- protected
+	- is not accessible outside of the class but accessible by children
+	- `protected _courseCount: number = 1`
+
+## class implementing an interface
+- syntax:
+	```ts
+	interface TakePhoto {
+		cameraMode: string
+		filter: string
+		burst: number
+	}
+
+	class Instagram implements TakePhoto {
+		constructor(
+			public cameraMode: string,
+			public filter: string,
+			public burst: number,
+			public caption: string,
+			public isVerified: boolean
+		){}
+	}
+	```
+- can add extra attributes, but MUST have all that are implemented in interface

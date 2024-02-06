@@ -18,6 +18,7 @@ class User {
         this.email = email;
         this.name = name;
         this.userId = userId;
+        // this is accessable by this class and inherited classed (but not outside)
         this._courseCount = 1;
         this.city = "denver";
     }
@@ -38,5 +39,17 @@ class User {
             throw new Error("Course count should be more than 1");
         }
         this._courseCount = courseNum;
+    }
+}
+// INHERITANCE
+//  SubUser will inherit all attributes from parent User
+//private are not accessable by child
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
