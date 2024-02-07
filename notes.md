@@ -280,3 +280,12 @@ reassign values based on index
 		}
 	}
 	```
+
+## generics
+- make components/functions easily reusable
+- building components that are reusable 
+	```ts
+	function identityThree<Type>(val: Type): Type {
+		return val
+	}
+	```
