@@ -32,3 +32,16 @@ interface Bottle{
 }
 
 identityFour<Bottle>({brand: "patron", type: 1})
+
+// arg is array of T types and return is one T type
+function getSearchProducts<T>(products: T[]): T {
+    const myIndex = 3
+    return products[myIndex]
+}
+
+// with "," means it is a generic not a jsx syntax
+const getMoreSearchProducts = <T,>(products: T[]): T => {
+    // do some database operations
+    const myIndex = 4
+    return products[myIndex]
+}

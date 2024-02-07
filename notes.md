@@ -283,9 +283,16 @@ reassign values based on index
 
 ## generics
 - make components/functions easily reusable
-- building components that are reusable 
+- building components that are reusable
+- keyword: `<T> or <Type>`
 	```ts
 	function identityThree<Type>(val: Type): Type {
 		return val
+	}
+
+	const getMoreSearchProducts = <T>(products: T[]): T => {
+		// do some database operations
+		const myIndex = 4
+		return products[myIndex]
 	}
 	```
