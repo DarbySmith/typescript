@@ -321,3 +321,34 @@ reassign values based on index
 		return false
 	}
 	```
+- instance of narrowing
+	 - `instanceof` keyword
+	 ```ts
+	 function logValue(x: Date | string) {
+		if (x instanceof Date) {
+			console.log(x.toUTCString());
+		} else {
+			console.log(x.toUpperCase())
+		}
+	}
+	 ```
+- type predicates
+	```ts
+	// this returns a type 
+	function isFish(pet: Fish | Bird): pet is Fish{
+		return (pet as Fish).swim !== undefined
+	}
+
+	function getFood(pet: Fish | Bird){
+		if (isFish(pet)) {
+			pet
+			return "fish food"
+		} else {
+			pet
+			return "bird food"
+		}
+	}
+	```
+- exhaustive types
+
+
