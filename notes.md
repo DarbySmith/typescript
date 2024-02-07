@@ -307,3 +307,17 @@ reassign values based on index
 		}
 	}
 	```
+
+## narrowing
+- try to narrow down the datatype of your variable
+- typeof type guards 
+- in operator narrowing
+	- a way to narrow down the potential type
+	```ts
+	function isAdminAccount(account: User | Admin){
+		if ("isAdmin" in account){
+			return account.isAdmin
+		}
+		return false
+	}
+	```
