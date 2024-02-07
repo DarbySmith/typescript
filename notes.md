@@ -286,13 +286,24 @@ reassign values based on index
 - building components that are reusable
 - keyword: `<T> or <Type>`
 	```ts
+	// generic function
 	function identityThree<Type>(val: Type): Type {
 		return val
 	}
 
+	// gereric variable
 	const getMoreSearchProducts = <T>(products: T[]): T => {
 		// do some database operations
 		const myIndex = 4
 		return products[myIndex]
+	}
+
+	// generic class
+	class Sellable<T>{
+		public cart: T[] = []
+
+		addToCart(product: T){
+		this.cart.push(product)
+		}
 	}
 	```
