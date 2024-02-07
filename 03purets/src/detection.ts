@@ -107,10 +107,10 @@ function getArea(shape: Shape){
         
         case "rectangle":
             return shape.length * shape.width
-            
+
         // this will protect you from when new types are added to Type so will yell at you        
         default:
             const _defaulForShape: never = shape
-            return _defaultForShape
+            return _defaulForShape
     }
 }
